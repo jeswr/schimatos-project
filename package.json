@@ -1,9 +1,9 @@
 {
-  "name": "@rubensworks/schimatos-project",
+  "name": "@jeswr/schimatos-project",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Ruben Taelman <ruben.taelman@ugent.be>",
+  "author": "Jesse Wright <jesse.wright@anu.edu.au>",
   "license": "MIT",
   "scripts": {
     "serve": "shower serve",
