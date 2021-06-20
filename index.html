@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head prefix="foaf: http://xmlns.com/foaf/0.1/">
-    <title>Schimatos %TITLE% Tooling Overview</title>
+    <title>Schimatos Tooling Overview</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="styles/rt-custom.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
-    
-    <link rel="foaf:maker" href="https://www.rubensworks.net/#me" />
 
     <style>
       .shower {
@@ -22,10 +20,10 @@
   <body class="shower list" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# org: http://www.w3.org/ns/org# schema: http://schema.org/ cite: http://purl.org/spar/cito/" typeof="schema:PresentationDigitalDocument">
     <header class="caption">
       <div class="title">
-        <h1 property="schema:name">Schimatos %TITLE% Tooling Overview</h1>
+        <h1 property="schema:name">Schimatos Tooling Overview</h1>
       </div>
       <div class="captiondata">
-        <p class="author" rel="schema:author"><a href="https://www.rubensworks.net/#me">Ruben Taelman</a></p>
+        <p class="author" rel="schema:author"><a href="https://github.com/jeswr">Jesse Wright</a></p>
         <p class="venue">
           <a href="">2021</a>, <span rel="schema:datePublished">21 June 2021</span></a>
         </p>
@@ -33,40 +31,58 @@
     </header>
 
     <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
-      <h2 property="schema:name">Schimatos %TITLE% Tooling Overview</h2>
+      <h2 property="schema:name">Schimatos Tooling Overview</h2>
       <ul class="author inline">
-          <li class="current"><a href="https://www.rubensworks.net/">Ruben Taelman</a></li>
+          <li class="current"><a href="https://github.com/jeswr">Jesse Wright</a></li>
       </ul>
-      <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
+      <p class="affiliation"><a href="https://www.anu.edu.au/">The Australian National University</a></p>
+      <img src="img/front-page.png" height='50%'>
     </section>
 
     <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
-        <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">INTRO</h2>
+        <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Motivation</h2>
         <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
-            <li>TODO</li>
+            <li>Improve accessibility for viewing and editing data on the Semantic Web.</li>
         </ul>
     </section>
 	
-    <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
-      <ul>
-        <li><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
+    <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
+      <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Architecture</h2>
+      <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+          <li>NodeShape => Form</li>
+          <li>PropertyShape => Field</li>
       </ul>
     </section>
     
-    <section id="index-a" class="slide index" inlist="" rel="schema:hasPart" resource="#index-a">
-      <ul>
-        <li class="current"><a href="#index-a">TODO</a></li>
-		<li><a href="#index-b">TODO</a></li>
+    <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
+      <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Implementation</h2>
+      <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+          <li>(1) Load data for relevant shape(s) using <a href="https://github.com/jeswr/shacl-query">SHACL Query</a></li>
+            <h5>SHACL Query package converts a SHACL constraint into a SPARQL construct query to extract all data relevant to a particular shape. To extract a SHACL SHAPE we use the NodeShape Shape.</h5>
+          <li>(2) Merge Relevant constraints using the <a href="https://github.com/jeswr/merge-shacl">Merge SHACL package</a></li>
       </ul>
     </section>
 	
+    <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
+      <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Implementation</h2>
+      <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+        <li>(3) Provide inference over the new constraing using the <a href="https://github.com/jeswr/sparql-inferenced">SPARQL Inferenced package</a> which extends on the <a href="https://github.com/jeswr/hylar-core">Hylar Engine</a></li>  
+        <li>(4) Load the merged shape as an object using <a href="https://github.com/jeswr/rdf-object-proxy">RDF Object Proxy</a></li>
+            <h5>SHACL Query package converts a SHACL constraint into a SPARQL construct query to extract all data relevant to a particular shape. To extract a SHACL SHAPE we use the NodeShape Shape.</h5>
+          <li>(2) Merge Relevant constraints using the Merge SHACL package</li>
+      </ul>
+    </section>
+
     <section id="some-slide" class="slide" inlist="" rel="schema:hasPart" resource="#some-slide">
-      <h2 property="schema:name">TODO: A regular slide</h2>
+      <h2 property="schema:name">Associated Packages & Development</h2>
       <ul>
+        <li>
+          <h3>on2ts</h3>
+    <span class="indent">Generated Typescript interfaces and classes based on OWL ontologies and SHACL constraints</span>
+      </li>
           <li>
-          	  <h3>A</h3>
-			  <span class="indent">TODO: Description</span>
+          	  <h3>SHACLC</h3>
+			  <span class="indent">Javascript SHACLC parser/writer extended to be conformant to entire SHACL specification</span>
           </li>
           <li>B</li>
           <li>C</li>
@@ -79,10 +95,9 @@
 
     <footer>
       <p class="license">
-            &#169; <span property="schema:copyrightYear">2021</span> <a href="https://www.rubensworks.net" rel="schema:copyrightHolder"><span resource="https://www.rubensworks.net/#me">Ruben Taelman</span></a>
-            — <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">Creative Commons Attribution 4.0</a>, unless otherwise indicated.
+            &#169; <span property="schema:copyrightYear">2021</span> <a href="https://www.rubensworks.net" rel="schema:copyrightHolder"><span resource="https://www.github.com/jeswr">Jesse Wright</span></a>
+            — <a rel="license" href="https://opensource.org/licenses/MIT" property="schema:license">MIT</a>, unless otherwise indicated.
       </p>
-      <a href="https://github.com/rubensworks/schimatos-project">Source</a>
     </footer>
 
     <script src="shower/shower.min.js"></script>
