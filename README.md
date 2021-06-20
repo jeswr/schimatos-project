@@ -30,6 +30,6 @@ View on http://localhost:3000/
 
 ## License
 
-These slides are created by [Ruben Taelman](https://rubensworks.net/).
+These slides are created by [Jesse Wright](https://github.com/jeswr/).
 
 [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise indicated.
