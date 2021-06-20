@@ -1,7 +1,7 @@
 # Slides for 2021 on Schimatos %TITLE% Tooling Overview
-[![Build Status](https://github.com/rubensworks/schimatos-project/workflows/Build%20and%20Deploy/badge.svg)](https://rubensworks.github.io/schimatos-project/)
+[![Build Status](https://github.com/jeswr/schimatos-project/workflows/Build%20and%20Deploy/badge.svg)](https://jeswr.github.io/schimatos-project/)
 
-**Live version: https://rubensworks.github.io/schimatos-project/**
+**Live version: https://jeswr.github.io/schimatos-project/**
 
 These slides are created using the [shower](https://github.com/shower/shower) framework.
 
