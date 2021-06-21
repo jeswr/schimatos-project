@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-21T10:13:24.428Z" agent="5.0 (X11)" etag="WeWb21zgBvxOAodzy446" version="14.7.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-21T10:44:17.323Z" agent="5.0 (X11)" etag="MXee4xVIeXrbIFOTXAPw" version="14.7.3" type="github">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
     <mxGraphModel dx="674" dy="1739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -81,20 +81,6 @@
             <mxPoint x="439.5" y="-170" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-55" value="CONSTRUCT QUERIES" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-680" relative="1" as="geometry">
-            <mxPoint x="612" y="458" as="targetPoint" />
-            <mxPoint x="612" y="397.75" as="sourcePoint" />
-            <mxPoint x="508" y="-658" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-56" value="SHACL Constraints (sets of Quads with skolemized blank nodes)" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-596" relative="1" as="geometry">
-            <mxPoint x="622" y="468" as="targetPoint" />
-            <mxPoint x="622" y="407.75" as="sourcePoint" />
-            <mxPoint x="414" y="-568" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="U5sJHbtddnW6i3F2b5jH-57" value="Merge SHACL" style="fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="360" y="-130" width="160" height="60" as="geometry" />
         </mxCell>
@@ -102,13 +88,6 @@
           <mxGeometry x="260" y="-228" as="geometry">
             <mxPoint x="440" y="-30" as="targetPoint" />
             <mxPoint x="439.5" y="-70" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-59" value="Single SHACL constraint" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-515" relative="1" as="geometry">
-            <mxPoint x="632" y="478" as="targetPoint" />
-            <mxPoint x="632" y="417.75" as="sourcePoint" />
-            <mxPoint x="323" y="-478" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="U5sJHbtddnW6i3F2b5jH-60" value="SPARQL Inferenced" style="fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -159,24 +138,10 @@
             <mxPoint x="439" y="30" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-70" value="Single SHACL constraint with inferenced value (as a set of quads)" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-437" relative="1" as="geometry">
-            <mxPoint x="642" y="488" as="targetPoint" />
-            <mxPoint x="642" y="427.75" as="sourcePoint" />
-            <mxPoint x="235" y="-388" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="U5sJHbtddnW6i3F2b5jH-72" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#FF0000;endFill=1;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="U5sJHbtddnW6i3F2b5jH-82">
           <mxGeometry x="259.5" y="-18" as="geometry">
             <mxPoint x="440" y="190" as="targetPoint" />
             <mxPoint x="439" y="140" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-73" value="Single SHACL constraint with inferenced values (as nested object)" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-357" relative="1" as="geometry">
-            <mxPoint x="652" y="498" as="targetPoint" />
-            <mxPoint x="652" y="437.75" as="sourcePoint" />
-            <mxPoint x="145" y="-288" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="U5sJHbtddnW6i3F2b5jH-75" value="on2ts" style="fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
@@ -257,12 +222,23 @@
             <mxPoint x="479.5" y="383" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="U5sJHbtddnW6i3F2b5jH-93" value="Set of Quads to remove &amp; set of Quads to delete at onSubmit event" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;align=left;verticalAlign=top;endArrow=open;endSize=8;endFill=1;rounded=0;strokeColor=none;" edge="1" parent="1">
-          <mxGeometry x="-1" y="-188" relative="1" as="geometry">
-            <mxPoint x="662" y="508" as="targetPoint" />
-            <mxPoint x="662" y="447.75" as="sourcePoint" />
-            <mxPoint x="6" y="-48" as="offset" />
-          </mxGeometry>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-94" value="Set of Quads to remove &amp;amp; set of Quads to delete at onSubmit event" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="475" y="403" width="430" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-95" value="Single SHACL constraint with inferenced values (as nested object)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="420" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-96" value="Single SHACL constraint with inferenced value (as a set of quads)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="420" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-97" value="Single SHACL constraint" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-60" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-98" value="SHACL Constraints (sets of Quads with skolemized blank nodes)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-160" width="410" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="U5sJHbtddnW6i3F2b5jH-99" value="CONSTRUCT QUERIES" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-260" width="160" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
