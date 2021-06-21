@@ -56,23 +56,34 @@
     
     <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
       <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Implementation</h2>
-      <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+      <ul >
           <li>(1) Load data for relevant shape(s) using <a href="https://github.com/jeswr/shacl-query">SHACL Query</a></li>
-            <h5>SHACL Query package converts a SHACL constraint into a SPARQL construct query to extract all data relevant to a particular shape. To extract a SHACL SHAPE we use the NodeShape Shape.</h5>
+            <h5>SHACL Query package converts a SHACL constraint into a SPARQL construct query to extract all data relevant to a particular shape. To extract a SHACL shape we use the NodeShape Shape. <a href="https://github.com/comunica">Comunica</a> is used to issue and federate the query over given sources (SPARQL endpoints, local files, linked data fragments etc.). By providing the <a href="https://github.com/jeswr/shaclcjs">shaclcjs</a> parser as an actor to a custom comunica configuration we can load files written in (extended) shaclc syntax.</h5>
           <li>(2) Merge Relevant constraints using the <a href="https://github.com/jeswr/merge-shacl">Merge SHACL package</a></li>
       </ul>
     </section>
 	
     <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
       <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Implementation</h2>
-      <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
-        <li>(3) Provide inference over the new constraing using the <a href="https://github.com/jeswr/sparql-inferenced">SPARQL Inferenced package</a> which extends on the <a href="https://github.com/jeswr/hylar-core">Hylar Engine</a></li>  
-        <li>(4) Load the merged shape as an object using <a href="https://github.com/jeswr/rdf-object-proxy">RDF Object Proxy</a></li>
-            <h5>SHACL Query package converts a SHACL constraint into a SPARQL construct query to extract all data relevant to a particular shape. To extract a SHACL SHAPE we use the NodeShape Shape.</h5>
-          <li>(2) Merge Relevant constraints using the Merge SHACL package</li>
+      <ul>
+        <li>(3) Provide inference over the new constraints using the <a href="https://github.com/jeswr/sparql-inferenced">SPARQL Inferenced package</a> which extends on the <a href="https://github.com/jeswr/hylar-core">Hylar Engine</a> (lightweight version) to allow for inferences based on construct queries (using the comunica engine).</li>  
+        <li>(4) Load the merged & inferenced shape as an object using <a href="https://github.com/jeswr/rdf-object-proxy">RDF Object Proxy</a> with <a href="https://github.com/on2ts">on2ts</a> used to provide type restrictions & assumptions.</li>
+        <h6>Since the inferencing applies all default values to the shapes, and adds all class relationships etc. this makes it much easier to program against the shape. For instance `sh:closed` will always have a boolean object `true` or `false`.</h6>
+ 
+        
+        <h6>Note: As a personal opensource project (when time allows) I intend to integrate steps (1) - (4) in an extension to on2ts. I also have several other projects which I intend to use such tooling for.</h6>
       </ul>
     </section>
 
+    <section id="start" class="slide" style="background-image: url('img/TODO.jpg')" inlist="" rel="schema:hasPart" resource="#start">
+      <h2 property="schema:name" class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Implementation</h2>
+      <ul>
+        <li>(5) The <a href="https://github.com/schimatos/shacl-form-react">SHACL Form React</a> packages then generates the form structure given the resource for the SHAPE from RDF Object Proxy, and an LDflex object for the entity which we wish to modify</li>
+        <li>(6) <a href="https://github.com/schimatos/shacl-form-react">SHACL Form React</a> also takes custom field generator (<a href="https://github.com/schimatos/ldfields">LDfields</a>) and SHACL validator as input </li>
+        <li>(7) When a submit event is triggered, <a href="https://github.com/schimatos/shacl-form-react">SHACL Form React</a> can be used to emit two sets of triples, (a set of triples to be added to the graph, and a set of triples to be removed from the graph). Comunica is then used to issue the relevant DELETEINSERT query over the given sources (internally to comunica, the deletion is applied to all source, the addition is applied to a designated primary source).</li>
+      </ul>
+    </section>
+<!-- 
     <section id="some-slide" class="slide" inlist="" rel="schema:hasPart" resource="#some-slide">
       <h2 property="schema:name">Associated Packages & Development</h2>
       <ul>
@@ -91,7 +102,9 @@
 	
     <section id="conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#conclusion">
       <h2 property="schema:name" class="big">TODO: Conclusion</h2>
-    </section>
+    </section> -->
+
+    
 
     <footer>
       <p class="license">
